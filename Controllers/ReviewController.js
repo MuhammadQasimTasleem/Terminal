@@ -1,6 +1,6 @@
 const Review = require('../models/Review');
 const Visitor = require('../models/visitor');
-const Attraction = require('../models/attraction');
+const Attraction = require('../models/Attraction');
 
 // Create a new review
 exports.createReview = async (req, res) => {

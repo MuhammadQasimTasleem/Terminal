@@ -10,7 +10,7 @@ const visitorRoutes = require('./routes/visitorRoutes');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/test')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -18,7 +18,7 @@ app.use('/attractions', attractionRoutes);
 app.use('/reviews', reviewRoutes);
 app.use('/visitors', visitorRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
